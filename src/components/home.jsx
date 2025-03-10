@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './header'
+import Header from './header';
 function Home() {
 
 
@@ -11,8 +11,7 @@ const su= ()=>{
   return (
     <div>
         <Header name="dbjnbnfkbfkbngfbkgbnkgfbi"/>
-      <h1 class ="text-red-300">Home</h1>
-      
+        <h1 className='bg-gray-700'>hfhfgbgffgnhfngfnyn</h1>      
         <button class="bg-gray-500" onClick={su}>Submit</button>
     </div>
   )
