@@ -4,7 +4,7 @@ import Button from './button';
 function Header({ name }) {  
   return (
     <div>
-      <h1 class="text-blue-300">Header {name}</h1>
+      <h1 className="text-blue-300">Header {name}</h1>
       <Button 
        
       />
