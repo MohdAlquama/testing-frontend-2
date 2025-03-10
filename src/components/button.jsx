@@ -4,7 +4,7 @@ function Button({
     name , colour 
 }) {
   return (
-    <div>
+    <div class="bg-blue-600">
       {name}
       {colour}
     </div>

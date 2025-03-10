@@ -4,10 +4,9 @@ import Button from './button';
 function Header({ name }) {  
   return (
     <div>
-      <h1>Header {name}</h1>
+      <h1 class="text-blue-300">Header {name}</h1>
       <Button 
-        name="add" 
-        colour="red"  
+       
       />
     </div>
   );

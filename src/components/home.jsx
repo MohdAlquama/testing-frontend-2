@@ -11,9 +11,9 @@ const su= ()=>{
   return (
     <div>
         <Header name="dbjnbnfkbfkbngfbkgbnkgfbi"/>
-      <h1>Home</h1>
+      <h1 class ="text-red-300">Home</h1>
       
-        <button onClick={su}>sssssss</button>
+        <button class="bg-gray-500" onClick={su}>Submit</button>
     </div>
   )
 }
