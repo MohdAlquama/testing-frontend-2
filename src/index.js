@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './components/home';
+import Tabs from './components/tap';
 import './input.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
+  <Tabs/>
   </React.StrictMode>
 );
 
