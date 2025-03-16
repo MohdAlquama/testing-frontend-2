@@ -17,6 +17,7 @@ const Navbar = () => {
     }
   }; 
 
+  
   // Set up the event listener on component mount and cleanup on unmount
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);

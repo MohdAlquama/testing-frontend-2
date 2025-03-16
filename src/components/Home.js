@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./layouts/navbar";
 import ProductCard from "./card/ProductCard";
 import { ChevronRight } from "lucide-react"; // Import the missing ChevronRight icon
-
+import CatCard from "./card/catCard";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -108,6 +108,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <CatCard image={"/assets/image.jpg"}/>
       </div>
     </div>
   );
