@@ -40,7 +40,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProductCard
-              image="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+              image="/assets/image.jpg"
               name="Nike Air Max"
               price={199.99}
               rating={4.8}
