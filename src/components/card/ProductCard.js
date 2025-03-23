@@ -8,7 +8,7 @@ const ProductCard = ({ image, name, price, rating }) => {
     <div className="group">
       <div className="relative overflow-hidden rounded-lg">
         <img 
-          src={image} 
+          src={image}
           alt={name}
           className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-500"
         />
@@ -22,7 +22,7 @@ const ProductCard = ({ image, name, price, rating }) => {
           <span className="text-sm text-gray-600">{rating}</span>
         </div>
         <h3 className="text-lg font-medium">{name}</h3>
-        <p className="text-gray-900 font-medium">${price}</p>
+        <p className="text-gray-900 font-medium">{price}</p>
       </div>
     </div>
   );

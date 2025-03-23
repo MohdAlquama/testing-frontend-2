@@ -9,7 +9,7 @@ export default function Home() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section 2 */}
       <div className="relative h-[80vh] bg-neutral-100">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-90">
           <div className="absolute inset-0 bg-black/30" />
@@ -108,7 +108,25 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <CatCard image={"/assets/image.jpg"}/>
+        {/* <div className="h-96 w-full"> */}
+          <h3 className=" font-bold mb-12 text-center mt-12">Don't Miss</h3>
+          {/* <div className="h-[1050] w-[549] "> */}
+            <CatCard image={"/assets/image.jpg"} />
+          {/* </div> */}
+        {/* </div> */}
+      </div>
+         
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Featured Collection
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ProductCard image="/assets/image.jpg" />
+            <ProductCard image="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2" />
+            <ProductCard image="https://images.unsplash.com/photo-1608231387042-66d1773070a5" />
+          </div>
+        </div>
       </div>
     </div>
   );
