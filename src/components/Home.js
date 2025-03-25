@@ -108,19 +108,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div className="h-96 w-full"> */}
-          <h3 className=" font-bold mb-12 text-center mt-12">Don't Miss</h3>
-          {/* <div className="h-[1050] w-[549] "> */}
+
+        <div className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <h3 className=" font-bold mb-5 text-center mt-12 text-2xl">
+              DON'T MISS
+            </h3>
             <CatCard image={"/assets/image.jpg"} />
-          {/* </div> */}
-        {/* </div> */}
+          </div>
+        </div>
       </div>
-         
+            
+      
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            Featured Collection
-          </h2>
+          <h2 className="text-3xl font-bold mb-10 text-center">SHOP NOW</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProductCard image="/assets/image.jpg" />
             <ProductCard image="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2" />
@@ -128,6 +130,103 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+      <h3 className=" font-bold my-1 text-center text-2xl"> WOMEN'S COLLECTION</h3>
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <CatCard image={"/assets/nike-just-do-it.png"} />
+            <CatCard image={"/assets/nike-just-do-it.jpg"} />
+            <CatCard image={"/assets/nike-just-do-its.jpg"} />
+          </div>
+        </div>
+      </div>
+
+      <footer className="bg-white py-10">
+        {/* upper class baar text  */}
+
+        <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Icons</h3>
+            <ul className="text-gray-500">
+              <li>Air Force 1</li>
+              <li>Huarache</li>
+              <li>Air Max 90</li>
+              <li>Air Max 95</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Shoes</h3>
+            <ul className="text-gray-600">
+              <li>All Shoes</li>
+              <li>Custom Shoes</li>
+              <li>Jordan Shoes</li>
+              <li>Running Shoes</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Clothing</h3>
+            <ul className="text-gray-600">
+              <li>All Clothing</li>
+              <li>Modest Wear</li>
+              <li>Hoodies & Pullovers</li>
+              <li>Shirts & Tops</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Kids'</h3>
+            <ul className="text-gray-600">
+              <li>Infant & Toddler Shoes</li>
+              <li>Kids Shoes</li>
+              <li>Kids Jordan Shoes</li>
+              <li>Kids Basketball Shoes</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-gray-300 my-4" />
+
+        {/* Bottom Section hear  */}
+
+        <div className="container mx-auto px-6 mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-600">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul>
+              <li>Find A Store</li>
+              <li>Become A Member</li>
+              <li>Send Us Feedback</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Help</h3>
+            <ul>
+              <li>Get Help</li>
+              <li>Order Status</li>
+              <li>Delivery</li>
+              <li>Returns</li>
+              <li>Payment Options</li>
+              <li>Contact Us On Nike.com Inquiries</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul>
+              <li>About Nike</li>
+              <li>News</li>
+              <li>Careers</li>
+              <li>Investors</li>
+              <li>Sustainability</li>
+              <li>Report a Concern</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
