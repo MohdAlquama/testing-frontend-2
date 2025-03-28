@@ -1,44 +1,59 @@
 import React from "react";
+import { ChevronRight, Star } from "lucide-react";
 import Navbar from "./layouts/navbar";
 import ProductCard from "./card/ProductCard";
-import { ChevronRight } from "lucide-react"; // Import the missing ChevronRight icon
 import CatCard from "./card/catCard";
+import Footer from "./layouts/Footer";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section 2 */}
-      <div className="relative h-[80vh] bg-neutral-100">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-90">
-          <div className="absolute inset-0 bg-black/30" />
-        </div>
-        <div className="relative h-full flex items-center">
+      {/* Hero Section - Refined */}
+      <div className="relative h-[90vh] bg-gradient-to-r from-gray-900 to-black">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-50" 
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80')"
+          }}
+        />
+        <div className="relative z-10 h-full flex items-center">
           <div className="container mx-auto px-6">
-            <div className="max-w-lg">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Step into Luxury
+            <div className="max-w-2xl">
+              <h1 className="text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+                Elevate Your Stride
               </h1>
-              <p className="text-xl text-white/90 mb-8">
-                Discover our exclusive collection of premium footwear designed
-                for those who demand excellence.
+              <p className="text-2xl text-white/80 mb-10 max-w-xl">
+                Innovative design meets unparalleled comfort. Experience footwear that transforms every step.
               </p>
-              <button className="bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-black hover:text-white transition-colors flex items-center gap-2">
-                Shop Collection <ChevronRight size={20} />
-              </button>
+              <div className="flex items-center space-x-6">
+                <button className="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors flex items-center gap-3 shadow-lg">
+                  Explore Collection <ChevronRight size={24} strokeWidth={2.5} />
+                </button>
+                <div className="flex items-center text-white space-x-2">
+                  <Star fill="gold" color="gold" size={24} />
+                  <span className="text-lg font-medium">4.9 (3.2K Reviews)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Featured Products */}
-      <div className="py-20 bg-white">
+      {/* Featured Products Section */}
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            Featured Collection
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black mb-4 text-gray-900">
+              Featured Collection
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Curated selections that blend cutting-edge technology with timeless style.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <ProductCard
               image="/assets/image.jpg"
               name="Nike Air Max"
@@ -59,174 +74,89 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Categories */}
-      <div className="py-20 bg-neutral-100">
+      {/* Categories Section - Enhanced */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Category 1 */}
-            <div className="relative h-[400px] group cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Men's Collection
-                </h3>
-                <button className="text-white flex items-center gap-2 hover:gap-4 transition-all">
-                  Shop Now <ChevronRight size={20} />
-                </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Men's Collection",
+                image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a",
+                description: "Bold designs for the modern man"
+              },
+              {
+                title: "Women's Collection",
+                image: "https://images.unsplash.com/photo-1622760807800-66cf1466fc08",
+                description: "Elegant styles that empower"
+              },
+              {
+                title: "Sport Collection",
+                image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782",
+                description: "Performance meets innovation"
+              }
+            ].map((category) => (
+              <div 
+                key={category.title} 
+                className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500"
+              >
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-500"
+                  style={{ backgroundImage: `url('${category.image}')` }}
+                />
+                <div className="absolute inset-0 bg-black/40 hover:bg-black/50 transition-colors" />
+                <div className="relative p-8 text-white h-[500px] flex flex-col justify-end">
+                  <h3 className="text-3xl font-bold mb-4">{category.title}</h3>
+                  <p className="text-lg mb-6 opacity-80">{category.description}</p>
+                  <button className="flex items-center text-white font-semibold hover:text-gray-200 group">
+                    Shop Now
+                    <ChevronRight 
+                      size={24} 
+                      className="ml-2 group-hover:translate-x-2 transition-transform" 
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-
-            {/* Category 2 */}
-            <div className="relative h-[400px] group cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1622760807800-66cf1466fc08')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Women's Collection
-                </h3>
-                <button className="text-white flex items-center gap-2 hover:gap-4 transition-all">
-                  Shop Now <ChevronRight size={20} />
-                </button>
-              </div>
-            </div>
-
-            {/* Category 3 */}
-            <div className="relative h-[400px] group cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514989940723-e8e51635b782')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Sport Collection
-                </h3>
-                <button className="text-white flex items-center gap-2 hover:gap-4 transition-all">
-                  Shop Now <ChevronRight size={20} />
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <h3 className=" font-bold mb-5 text-center mt-12 text-2xl">
-              DON'T MISS
-            </h3>
-            <CatCard image={"/assets/image.jpg"} />
-          </div>
-        </div>
-      </div>
-            
-      
-      <div className="py-20 bg-white">
+      {/* Additional Sections: Shop Now & Women's Collection */}
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10 text-center">SHOP NOW</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-gray-900">Latest Arrivals</h2>
+            <p className="text-xl text-gray-600 mt-4">
+              Fresh styles that define the season
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <ProductCard image="/assets/image.jpg" />
             <ProductCard image="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2" />
             <ProductCard image="https://images.unsplash.com/photo-1608231387042-66d1773070a5" />
           </div>
         </div>
-      </div>
+      </section>
 
-
-      <h3 className=" font-bold my-1 text-center text-2xl"> WOMEN'S COLLECTION</h3>
-      <div className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-gray-900">Women's Collection</h2>
+            <p className="text-xl text-gray-600 mt-4">
+              Styles that celebrate femininity and strength
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <CatCard image={"/assets/nike-just-do-it.png"} />
             <CatCard image={"/assets/nike-just-do-it.jpg"} />
             <CatCard image={"/assets/nike-just-do-its.jpg"} />
           </div>
         </div>
-      </div>
+      </section>
 
-      <footer className="bg-white py-10">
-        {/* upper class baar text  */}
-
-        <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Icons</h3>
-            <ul className="text-gray-500">
-              <li>Air Force 1</li>
-              <li>Huarache</li>
-              <li>Air Max 90</li>
-              <li>Air Max 95</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Shoes</h3>
-            <ul className="text-gray-600">
-              <li>All Shoes</li>
-              <li>Custom Shoes</li>
-              <li>Jordan Shoes</li>
-              <li>Running Shoes</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Clothing</h3>
-            <ul className="text-gray-600">
-              <li>All Clothing</li>
-              <li>Modest Wear</li>
-              <li>Hoodies & Pullovers</li>
-              <li>Shirts & Tops</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Kids'</h3>
-            <ul className="text-gray-600">
-              <li>Infant & Toddler Shoes</li>
-              <li>Kids Shoes</li>
-              <li>Kids Jordan Shoes</li>
-              <li>Kids Basketball Shoes</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="border-gray-300 my-4" />
-
-        {/* Bottom Section hear  */}
-
-        <div className="container mx-auto px-6 mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-600">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul>
-              <li>Find A Store</li>
-              <li>Become A Member</li>
-              <li>Send Us Feedback</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Help</h3>
-            <ul>
-              <li>Get Help</li>
-              <li>Order Status</li>
-              <li>Delivery</li>
-              <li>Returns</li>
-              <li>Payment Options</li>
-              <li>Contact Us On Nike.com Inquiries</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul>
-              <li>About Nike</li>
-              <li>News</li>
-              <li>Careers</li>
-              <li>Investors</li>
-              <li>Sustainability</li>
-              <li>Report a Concern</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

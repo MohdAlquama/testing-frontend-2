@@ -1,11 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './components/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './input.css';
+import MensCollection from './components/collection/menCollections';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+
+    <BrowserRouter>
+
+    <Routes>
+
+      <Route path='/'  element={<Home />}/>
+
+      <Route path='/men' element ={<MensCollection /> } />
+
+    </Routes>
+
+    
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 
