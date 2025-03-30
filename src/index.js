@@ -4,6 +4,8 @@ import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './input.css';
 import MensCollection from './components/collection/menCollections';
+import WomenCollection from './components/collection/womenCollection';
+import { Heading1 } from 'lucide-react';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,6 +17,8 @@ root.render(
       <Route path='/'  element={<Home />}/>
 
       <Route path='/men' element ={<MensCollection /> } />
+
+      <Route path='/women' element ={<WomenCollection />} />
 
     </Routes>
 

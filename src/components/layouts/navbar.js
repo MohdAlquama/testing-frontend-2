@@ -45,7 +45,7 @@ const Navbar = () => {
           {/* Desktop Navigation Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link to={"/men"} className="text-gray-600 hover:text-black">Men</Link>
-            <a href="#" className="text-gray-600 hover:text-black">Women</a>
+            <Link to={"/women"} className="text-gray-600 hover:text-black">Women</Link>
             <a href="#" className="text-gray-600 hover:text-black">Sport</a>
             <a href="#" className="text-gray-600 hover:text-black">Collection</a>
             <a href="#" className="text-gray-600 hover:text-black">Sale</a>

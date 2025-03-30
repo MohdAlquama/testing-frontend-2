@@ -31,7 +31,7 @@ const MensCollection = () => {
       category: "Running",
       price: 179.99,
       rating: 4.6,
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27c4",
+      image: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2",
       colors: ['Gray', 'Blue', 'Green']
     },
     {
@@ -40,7 +40,7 @@ const MensCollection = () => {
       category: "Lifestyle",
       price: 129.99,
       rating: 4.7,
-      image: "https://images.unsplash.com/photo-1579338559194-2160e6b4855a",
+      image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a",
       colors: ['White', 'Black']
     },
     // Add more products...
