@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './input.css';
 import MensCollection from './components/collection/menCollections';
 import WomenCollection from './components/collection/womenCollection';
+import SportCollection from './components/collection/sportCollection';
 import { Heading1 } from 'lucide-react';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,8 @@ root.render(
       <Route path='/men' element ={<MensCollection /> } />
 
       <Route path='/women' element ={<WomenCollection />} />
+
+      <Route path='sport' element ={<SportCollection/>} />
 
     </Routes>
 

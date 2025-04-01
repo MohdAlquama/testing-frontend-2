@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link to={"/men"} className="text-gray-600 hover:text-black">Men</Link>
             <Link to={"/women"} className="text-gray-600 hover:text-black">Women</Link>
-            <a href="#" className="text-gray-600 hover:text-black">Sport</a>
+            <Link to={"/sport"} className="text-gray-600 hover:text-black">Sport</Link>
             <a href="#" className="text-gray-600 hover:text-black">Collection</a>
             <a href="#" className="text-gray-600 hover:text-black">Sale</a>
           </div>
