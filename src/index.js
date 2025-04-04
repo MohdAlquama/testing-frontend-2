@@ -6,6 +6,7 @@ import './input.css';
 import MensCollection from './components/collection/menCollections';
 import WomenCollection from './components/collection/womenCollection';
 import SportCollection from './components/collection/sportCollection';
+import AllCollection from './components/collection/allCollection';
 import { Heading1 } from 'lucide-react';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +22,9 @@ root.render(
 
       <Route path='/women' element ={<WomenCollection />} />
 
-      <Route path='sport' element ={<SportCollection/>} />
+      <Route path='/sport' element ={<SportCollection/>} />
+
+      <Route path='/all' element ={<AllCollection/>} />
 
     </Routes>
 

@@ -47,8 +47,8 @@ const Navbar = () => {
             <Link to={"/men"} className="text-gray-600 hover:text-black">Men</Link>
             <Link to={"/women"} className="text-gray-600 hover:text-black">Women</Link>
             <Link to={"/sport"} className="text-gray-600 hover:text-black">Sport</Link>
-            <a href="#" className="text-gray-600 hover:text-black">Collection</a>
-            <a href="#" className="text-gray-600 hover:text-black">Sale</a>
+            <Link to={"/All"} className="text-gray-600 hover:text-black">Collection</Link>
+            <Link to ={"/sale"} className="text-gray-600 hover:text-black">Sale</Link>
           </div>
 
           {/* Desktop and Mobile Action Icons */}
