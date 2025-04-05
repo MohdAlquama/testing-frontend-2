@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link to={"/men"} className="text-gray-600 hover:text-black">Men</Link>
             <Link to={"/women"} className="text-gray-600 hover:text-black">Women</Link>
             <Link to={"/sport"} className="text-gray-600 hover:text-black">Sport</Link>
-            <Link to={"/All"} className="text-gray-600 hover:text-black">Collection</Link>
+            <Link to={"/collection"} className="text-gray-600 hover:text-black">Collection</Link>
             <Link to ={"/sale"} className="text-gray-600 hover:text-black">Sale</Link>
           </div>
 
@@ -71,15 +71,15 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu (Hidden on large screens) */}
-        <div
+        <div 
           ref={mobileMenuRef} // Attach the ref to the mobile menu
           className={`lg:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} mt-4`}
         >
-          <a href="#" className="block text-gray-600 hover:text-black py-2">Men</a>
-          <a href="#" className="block text-gray-600 hover:text-black py-2">Women</a>
-          <a href="#" className="block text-gray-600 hover:text-black py-2">Sport</a>
-          <a href="#" className="block text-gray-600 hover:text-black py-2">Collection</a>
-          <a href="#" className="block text-gray-600 hover:text-black py-2">Sale</a>
+         <Link to={"/men"} className="text-gray-600 hover:text-black">Men</Link>
+            <Link to={"/women"} className="text-gray-600 hover:text-black">Women</Link>
+            <Link to={"/sport"} className="text-gray-600 hover:text-black">Sport</Link>
+            <Link to={"/collection"} className="text-gray-600 hover:text-black">Collection</Link>
+            <Link to ={"/sale"} className="text-gray-600 hover:text-black">Sale</Link>
         </div>
       </div>
     </nav>

@@ -1,7 +1,7 @@
 import React from 'react'
 import GridCard from "../card/gridCards";
 import CatCard from "../card/catCard";
-function App() {
+function AllCollection() {
   return (
     <div>
       <GridCard />
@@ -9,7 +9,7 @@ function App() {
   );
 }
 
-export default allCollection
+export default AllCollection
 
 
 

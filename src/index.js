@@ -24,7 +24,7 @@ root.render(
 
       <Route path='/sport' element ={<SportCollection/>} />
 
-      <Route path='/all' element ={<AllCollection/>} />
+      <Route path='/collection' element ={<AllCollection/>} />
 
     </Routes>
 
