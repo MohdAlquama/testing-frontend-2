@@ -3,12 +3,12 @@ import SimpleCard from "./simpleCards";
 
 const GridCard = () => {
   const shoes = [
-    { name: "Nike Air Max", price: 6999, image: "https://via.placeholder.com/150" },
-    { name: "Adidas Ultraboost", price: 7999, image: "https://via.placeholder.com/150" },
-    { name: "Puma RS-X", price: 5999, image: "https://via.placeholder.com/150" },
-    { name: "Reebok Classic", price: 4999, image: "https://via.placeholder.com/150" },
-    { name: "New Balance 574", price: 5499, image: "https://via.placeholder.com/150" },
-    { name: "Asics Gel-Lyte", price: 6299, image: "https://via.placeholder.com/150" }
+    { name: "Nike Air Max", price: 6999, image: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/caacf18f-f891-49a9-9312-05d91e77d8d0/W+NIKE+VOMERO+18.png" },
+    { name: "Adidas Ultraboost", price: 7999, image: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/caacf18f-f891-49a9-9312-05d91e77d8d0/W+NIKE+VOMERO+18.png" },
+    { name: "Puma RS-X", price: 5999, image: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/caacf18f-f891-49a9-9312-05d91e77d8d0/W+NIKE+VOMERO+18.png" },
+    { name: "Reebok Classic", price: 4999, image: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/caacf18f-f891-49a9-9312-05d91e77d8d0/W+NIKE+VOMERO+18.png" },
+    { name: "New Balance 574", price: 5499, image: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/caacf18f-f891-49a9-9312-05d91e77d8d0/W+NIKE+VOMERO+18.png" },
+    { name: "Asics Gel-Lyte", price: 6299, image: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/caacf18f-f891-49a9-9312-05d91e77d8d0/W+NIKE+VOMERO+18.png" }
   ];
 
   return (

@@ -3,6 +3,7 @@ import { ChevronRight, Star } from "lucide-react";
 import CatCard from "../card/catCard";
 import Navbar from "../layouts/navbar";
 import Footer from "../layouts/Footer";
+import Category from "../layouts/Category";
 const WomenCollection = () => {
   return (
     <div>
@@ -84,6 +85,8 @@ const WomenCollection = () => {
         </div>
       </section>
 
+      <Category/>
+      
       {/* Categories Section - Enhanced */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-6">
@@ -135,7 +138,7 @@ const WomenCollection = () => {
           </div>
         </div>
       </section>
-
+       
       <Footer />
     </div>
     // <h1>nothing </h1>

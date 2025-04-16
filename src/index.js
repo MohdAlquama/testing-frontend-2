@@ -8,6 +8,7 @@ import WomenCollection from './components/collection/womenCollection';
 import SportCollection from './components/collection/sportCollection';
 import AllCollection from './components/collection/allCollection';
 import { Heading1 } from 'lucide-react';
+import SaleCollection from './components/collection/saleCollection';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -25,6 +26,8 @@ root.render(
       <Route path='/sport' element ={<SportCollection/>} />
 
       <Route path='/collection' element ={<AllCollection/>} />
+
+      <Route path='/sale' element ={<SaleCollection/>}/>
 
     </Routes>
 

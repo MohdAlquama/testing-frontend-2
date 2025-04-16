@@ -79,6 +79,9 @@ export default function Home() {
       {/* Categories Section - Enhanced */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
+        <h2 className="text-4xl text-center font-black mb-16 text-gray-900">
+              All Type Of Collections
+            </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
